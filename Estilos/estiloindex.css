@@ -1,0 +1,751 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #530B13;
+}
+
+/* Encabezado con mismo color que footer */
+header {
+    background-color: #530B13; /* Mismo color que el footer */
+    border-bottom: none; /* Eliminamos el borde inferior previo */
+}
+
+/* Ajustes para los elementos del header con nuevo color */
+.navbar-brand .nombre-pagina {
+    color: white !important; /* Texto blanco para mejor contraste */
+}
+
+.navbar-nav .nav-link {
+    color: white !important; /* Texto blanco para los enlaces */
+    opacity: 0.9;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white !important;
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Separador con color claro */
+.separator {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Íconos de redes sociales */
+.social-icon {
+    color: white !important;
+    opacity: 0.9;
+}
+
+.social-icon:hover {
+    color: white !important;
+    opacity: 1;
+}
+
+/* Ícono de búsqueda */
+#searchIcon i {
+    color: white !important;
+}
+
+/* Menú hamburguesa en móviles */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* WhatsApp mantiene su color distintivo */
+.whatsapp-icon {
+    color: #25D366 !important;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.whatsapp-icon:hover {
+    color: #25D366 !important;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    height: 2.5rem; /* 40px - proporcional al texto */
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.nombre-pagina {
+    font-size: 1.8rem; /* Tamaño base */
+    line-height: 1;
+    margin-left: 0.8rem;
+    position: relative;
+    top: 1px; /* Ajuste fino de alineación vertical */
+}
+
+/* Separador proporcional */
+.separator {
+    height: 2.2rem; /* Similar al logo */
+    margin: 0 1.2rem;
+}
+
+/* Elementos de navegación proporcionales */
+.navbar-nav .nav-link {
+    font-size: 1.05rem;
+    padding: 0.5rem 0.8rem;
+    margin: 0 0.3rem;
+}
+
+/* Ícono de búsqueda proporcional */
+#searchIcon i {
+    font-size: 1.4rem;
+    vertical-align: middle;
+}
+
+/* Ajustes para el menú colapsable */
+.navbar-toggler {
+    padding: 0.35rem 0.6rem;
+}
+
+.navbar-toggler-icon {
+    width: 1.4em;
+    height: 1.4em;
+}
+
+/* Escalado responsivo */
+@media (max-width: 1200px) {
+    .nombre-pagina {
+        font-size: 1.6rem;
+    }
+    .logo {
+        height: 2.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .nombre-pagina {
+        font-size: 1.5rem;
+    }
+    .separator {
+        height: 2rem;
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+    }
+    .nombre-pagina {
+        font-size: 1.4rem;
+    }
+    .logo {
+        height: 2rem;
+    }
+    .separator {
+        height: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .nombre-pagina {
+        font-size: 1.3rem;
+    }
+    .logo {
+        height: 1.8rem;
+    }
+    .separator {
+        display: none; /* Ocultar en móviles muy pequeños */
+    }
+}
+/* Estilos para redes sociales en el header */
+.social-icons-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.social-icon {
+    color: #2A2769;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    display: flex;
+    padding: 0.3rem;
+}
+
+.social-icon:hover {
+    color: #530B13;
+    transform: translateY(-2px);
+}
+
+/* Estilo especial para WhatsApp */
+.whatsapp-icon {
+    color: #25D366; /* Verde de WhatsApp */
+    background-color: rgba(37, 211, 102, 0.1);
+    border-radius: 50%;
+    padding: 0.3rem;
+}
+
+.whatsapp-icon:hover {
+    color: #25D366;
+    background-color: rgba(37, 211, 102, 0.2);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 992px) {
+    .social-icons-header {
+        margin-top: 1rem;
+        justify-content: center;
+        width: 100%;
+        padding: 0.5rem 0;
+        border-top: 1px solid rgba(42, 39, 105, 0.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .social-icon {
+        font-size: 1.3rem;
+    }
+}
+
+/* Ajustes para el header con redes sociales */
+.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+/* Mejoras para el carrusel - Texto legible */
+.carousel-caption {
+    background-color: rgba(83, 11, 19, 0.85); /* Fondo semitransparente */
+    padding: 25px 30px;
+    border-radius: 10px;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.carousel-caption h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.carousel-caption p {
+    font-size: 1.4rem;
+    color: #f8f9fa;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* Mantenemos el tamaño original de las imágenes */
+.carousel-item img {
+    height: 500px; /* Conservamos esta medida */
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Mejoras para el texto SIN afectar tamaño de imagen */
+.carousel-caption {
+    background: linear-gradient(to right, rgba(83, 11, 19, 0.9), rgba(42, 39, 105, 0.9));
+    padding: 20px 30px;
+    border-radius: 8px;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 800px;
+    border: 2px solid white;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: #f8f9fa;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Overlay sutil solo en la parte inferior */
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 100%);
+    z-index: 1;
+}
+
+/* Asegurar que el texto esté sobre el overlay */
+.carousel-caption {
+    z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-caption {
+        width: 90%;
+        padding: 15px;
+        bottom: 30px;
+    }
+    .carousel-caption h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption {
+        bottom: 20px;
+    }
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+/* Secciones */
+.section-title {
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #2A2769;
+}
+/* Sección de Bienvenida - Ajustes para imagen proporcional */
+.welcome-section {
+    margin: 3rem 0;
+}
+
+.welcome-card {
+    background-color: #f8f9fa;
+    border: 2px solid #2A2769;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.welcome-card h1 {
+    color: #530B13;
+    font-size: 2.8rem; /* Tamaño base del título */
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.welcome-content {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.welcome-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.welcome-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-image-container img {
+    max-height: 400px; /* Relación 1:1.5 con el título (2.8rem ≈ 45px * 1.5 ≈ 400px) */
+    width: auto;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .welcome-content {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    
+    .welcome-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .welcome-card h1 {
+        font-size: 2.4rem;
+    }
+    
+    .welcome-image-container img {
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-card h1 {
+        font-size: 2rem;
+    }
+    
+    .welcome-text p {
+        font-size: 1.1rem;
+    }
+    
+    .welcome-image-container img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-card h1 {
+        font-size: 1.8rem;
+    }
+    
+    .welcome-image-container img {
+        max-height: 250px;
+    }
+}
+
+/* Destinos destacados */
+.destination-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.destination-body h3 {
+    color: #530B13;
+    margin-bottom: 1rem;
+}
+
+.btn-destination {
+    background-color: #2A2769;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-destination:hover {
+    background-color: #530B13;
+    color: white;
+}
+
+/* Por qué elegirnos */
+.why-us-content {
+    background-color: #530B13;
+    color: white;
+}
+
+.why-us-content h2 {
+    color: white;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: #2A2769;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.icon-box i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Testimonios */
+.testimonial-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.quote-icon i {
+    font-size: 2rem;
+    color: #2A2769;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.client-info h5 {
+    color: #530B13;
+    margin-bottom: 0.2rem;
+}
+
+/* CTA */
+.cta-content {
+    background-color: #2A2769;
+    color: white;
+}
+
+.cta-content h2 {
+    color: white;
+}
+
+.btn-cta {
+    background-color: #530B13;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #3a0810;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #530B13;
+    color: white;
+    padding-top: 2rem;
+}
+
+footer h4 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #2A2769;
+}
+
+hr {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .welcome-card h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Estilos para la página de destinos */
+.destinos-section {
+    padding: 2rem 0;
+}
+
+.destinos-table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.destinos-table th {
+    background-color: #530B13;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+
+.destinos-table td {
+    vertical-align: middle;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.mes-cell {
+    font-weight: bold;
+    color: #530B13;
+    background-color: rgba(83, 11, 19, 0.05);
+    text-transform: capitalize;
+}
+
+.btn-reservar {
+    background-color: #2A2769;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.btn-reservar:hover {
+    background-color: #530B13;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mes-col, .fechas-col, .action-col {
+        display: none;
+    }
+    
+    .destinos-table td {
+        display: block;
+        border-bottom: none;
+    }
+    
+    .destinos-table td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 120px;
+        color: #530B13;
+    }
+    
+    .destinos-table tr {
+        margin-bottom: 1rem;
+        display: block;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 0.5rem;
+    }
+    
+    .mes-cell {
+        background-color: #530B13;
+        color: white !important;
+        display: block;
+        margin: -0.5rem -0.5rem 0.5rem -0.5rem;
+        padding: 0.5rem;
+        border-radius: 5px 5px 0 0;
+    }
+}
+
+/* Estilos para la página de experiencias */
+.experiencias-section {
+    padding: 3rem 0;
+}
+
+.experience-card {
+    background-color: white;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.experience-card h5 {
+    color: #530B13;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.fst-italic {
+    color: #555;
+    line-height: 1.6;
+}
+
+.add-testimonial {
+    border: 2px dashed #2A2769;
+}
+
+/* Efectos hover */
+.experience-card:hover {
+    border-color: #2A2769;
+}
+
+.btn-outline-primary {
+    color: #2A2769;
+    border-color: #2A2769;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2A2769;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonial-img {
+        width: 60px;
+        height: 60px;
+    }
+}

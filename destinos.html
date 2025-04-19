@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Axolotl Tours - Tu escape perfecto a la medida</title>
+        <!-- Enlace a Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Enlace al archivo CSS -->
+        <link rel="stylesheet" href="Estilos/estiloindex.css">
+        
+    
+        <style>
+            /* Estilo personalizado para la barra de búsqueda */
+            .search-bar {
+                display: none; /* Oculta la barra de búsqueda inicialmente */
+                position: absolute;
+                top: 100%; /* Posición justo debajo del ícono */
+                right: 0;
+                background: white;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                padding: 0.5rem;
+                border-radius: 5px;
+                z-index: 10; /* Asegura que esté encima de otros elementos */
+            }
+        </style>
+    </head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light position-relative">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="Recursos/LOGO.jpeg" alt="Logo Axolotl Tours" class="logo img-fluid">
+                    <span class="ms-2 nombre-pagina">Axolotl Tours</span>
+                </a>
+                <div class="separator"></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="destinos.html">Destinos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="experiencias.html">Experiencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Redes sociales en header - incluyendo WhatsApp -->
+                    <div class="social-icons-header ms-3">
+                        <a href="https://www.facebook.com/profile.php?id=61559775192871" target="_blank" class="social-icon" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/axolotl_tours?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@axolotltoursmx?is_from_webapp=1&sender_device=pc" target="_blank" class="social-icon" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/5215512345678" target="_blank" class="social-icon whatsapp-icon" aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Ícono de búsqueda -->
+                    <div class="position-relative ms-3">
+                        <button class="btn btn-link p-0" id="searchIcon" aria-label="Buscar">
+                            <i class="bi bi-search"></i>
+                        </button>
+                        <div class="search-bar" id="searchBar">
+                            <input type="text" class="form-control" placeholder="Buscar...">
+                            <button class="btn btn-primary mt-2 w-100">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section class="destinos-section">
+            <h1 class="text-center mb-5">Nuestros Destinos 2025</h1>
+            
+            <div class="table-responsive">
+                <table class="table table-hover destinos-table">
+                    <thead>
+                        <tr>
+                            <th class="mes-col">Mes</th>
+                            <th>Destino</th>
+                            <th class="fechas-col">Fechas de salida</th>
+                            <th>Razón para visitar</th>
+                            <th class="action-col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Febrero -->
+                        <tr>
+                            <td class="mes-cell">Febrero</td>
+                            <td>Mariposa Monarca (Michoacán o EdoMex)</td>
+                            <td>Sábado 22</td>
+                            <td>Última oportunidad para ver la mariposa en su hábitat antes de su migración</td>
+                            <td><button class="btn btn-reservar">Reservar</button></td>
+                        </tr>
+                        
+                        <!-- Abril -->
+                        <tr>
+                            <td class="mes-cell">Abril</td>
+                            <td>Grutas de Tolantongo (Hidalgo)</td>
+                            <td>Sábado 4</td>
+                            <td>Pozas y ríos termales ideales antes de la temporada alta de Semana Santa</td>
+                            <td><button class="btn btn-reservar">Reservar</button></td>
+                        </tr>
+                        
+                        <!-- Mayo -->
+                        <tr>
+                            <td class="mes-cell">Mayo</td>
+                            <td>Peña de Bernal y Viñedos (Querétaro)</td>
+                            <td>Sábado 10</td>
+                            <td>Clima fresco ideal para disfrutar viñedos y la magia de Bernal</td>
+                            <td><button class="btn btn-reservar">Reservar</button></td>
+                        </tr>
+                        
+                        <!-- Junio -->
+                        <tr>
+                            <td class="mes-cell">Junio</td>
+                            <td>Tequesquitengo</td>
+                            <td>Sábado 28</td>
+                            <td>Laguna cristalina ideal para relajarse en temporada baja</td>
+                            <td><button class="btn btn-reservar">Reservar</button></td>
+                        </tr>
+                        
+                        <!-- Julio -->
+                        <tr>
+                            <td class="mes-cell">Julio</td>
+                            <td>Tajin y Costa Esmeralda</td>
+                            <td>19 y 20</td>
+                            <td>La zona arqueológica y las playas de costa esmeralda, un viaje de cultura y mar</td>
+                            <td><button class="btn btn-reservar">Reservar</button></td>
+                        </tr>
+                        
+                        <!-- Septiembre -->
+                        <tr>
+                            <td class="mes-cell">Septiembre</td>
+                            <td>Real del Monte y Prismas Basálticos (Hidalgo)</td>
+                            <td>Sábado 14 o 28</td>
+                            <td>Cultura y gastronomía en un pueblo mágico combinado con formaciones naturales únicas</td>
+                            <td><button class="btn btn-reservar">Reservar</button></td>
+                        </tr>
+                        
+                        <!-- Octubre -->
+                        <tr>
+                            <td class="mes-cell">Octubre</td>
+                            <td>Xochimilco y Noche de Día de Muertos (CDMX)</td>
+                            <td>Viernes 25 o sábado 26</td>
+                            <td>Experiencia única en trajineras con leyendas, música y tradiciones</td>
+                            <td><button class="btn btn-reservar">Reservar</button></td>
+                        </tr>
+                        <tr>
+                            <td class="mes-cell">Octubre</td>
+                            <td>Día de Muertos en Huaquechula (Puebla)</td>
+                            <td>Sábado 26 o domingo 27</td>
+                            <td>Altares monumentales y una de las expresiones más emblemáticas de la tradición</td>
+                            <td><button class="btn btn-reservar">Reservar</button></td>
+                        </tr>
+                        <tr>
+                            <td class="mes-cell">Octubre</td>
+                            <td>Noche de Muertos en Pátzcuaro y Janitzio (Michoacán)</td>
+                            <td>Jueves 31 y viernes 1</td>
+                            <td>Cementerios iluminados con veladoras, ceremonias purépechas y danzas tradicionales</td>
+                            <td><button class="btn btn-reservar">Reservar</button></td>
+                        </tr>
+                        
+                        <!-- Noviembre -->
+                        <tr>
+                            <td class="mes-cell">Noviembre</td>
+                            <td>Grutas de Cacahuamilpa y Taxco (Guerrero)</td>
+                            <td>Sábado 9 o 16</td>
+                            <td>Un tour natural y cultural para disfrutar en otoño</td>
+                            <td><button class="btn btn-reservar">Reservar</button></td>
+                        </tr>
+                        <tr>
+                            <td class="mes-cell">Noviembre</td>
+                            <td>Tlalpujahua y Feria de la Esfera (Michoacán)</td>
+                            <td>Sábado 23 o 30</td>
+                            <td>Ideal para adquirir artesanías y decoración navideña</td>
+                            <td><button class="btn btn-reservar">Reservar</button></td>
+                        </tr>
+                        
+                        <!-- Diciembre -->
+                        <tr>
+                            <td class="mes-cell">Diciembre</td>
+                            <td>Tlalpujahua y Feria de la Esfera (Michoacán)</td>
+                            <td>Sábado 7 o 14</td>
+                            <td>Segunda oportunidad para disfrutar la feria navideña antes de Navidad</td>
+                            <td><button class="btn btn-reservar">Reservar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="cta-section mt-5 mb-5">
+            <div class="cta-content p-5 rounded-3 text-center">
+                <h2 class="mb-4">¿Listo para tu próxima aventura?</h2>
+                <p class="lead mb-4">Contáctanos para más información sobre estos destinos o para reservar tu lugar.</p>
+                <a href="#" class="btn btn-cta btn-lg">Contáctanos</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer igual que index.html -->
+    <footer>
+        <!-- ... -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- Footer -->
+<footer>
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h4>Axolotl Tours</h4>
+                <p>"Somos el escape perfecto a tu medida"</p>
+                <!-- Redes sociales en header - incluyendo WhatsApp -->
+                <div class="social-icons-header ms-3">
+                    <a href="https://www.facebook.com/profile.php?id=61559775192871" target="_blank" class="social-icon" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/axolotl_tours?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@axolotltoursmx?is_from_webapp=1&sender_device=pc" target="_blank" class="social-icon" aria-label="TikTok">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/5215512345678" target="_blank" class="social-icon whatsapp-icon" aria-label="WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h4>Enlaces rápidos</h4>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinos.html">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="experiencias.html">Experiencias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Contacto</h4>
+                <p><i class="bi bi-geo-alt-fill me-2"></i> Ciudad de México, México</p>
+                <p><i class="bi bi-telephone-fill me-2"></i> +52 55 1234 5678</p>
+                <p><i class="bi bi-envelope-fill me-2"></i> info@axolotltours.com</p>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center">
+            <p class="mb-0">© 2023 Axolotl Tours. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+</html>
