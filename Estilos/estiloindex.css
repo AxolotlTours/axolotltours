@@ -47,7 +47,7 @@ header {
     right: 30px;
     width: 60px;
     height: 60px;
-    background-color: #25D366; /* Color oficial de WhatsApp */
+    background-color: #25D366; /* Color de WhatsApp */
     color: white;
     border-radius: 50%;
     text-align: center;
@@ -57,7 +57,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
 }
 
 .whatsapp-float:hover {
