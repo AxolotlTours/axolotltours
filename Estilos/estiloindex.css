@@ -10,7 +10,7 @@ body {
 
 /* Logo en navbar */
 .navbar-brand {
-    padding: 0;
+    padding: 0 0 0 15px; /* Sintaxis shorthand: padding-top padding-right padding-bottom padding-left */
     margin-right: 0;
 }
 
@@ -33,7 +33,7 @@ body {
 
 /* Encabezado con mismo color que footer */
 header {
-    background-color: #530B13; /* Mismo color que el footer */
+    background-color: #800559; /* Mismo color que el footer */
     border-bottom: none; /* Eliminamos el borde inferior previo */
 }
 
@@ -44,7 +44,12 @@ header {
 
 .navbar-nav .nav-link {
     color: white !important; /* Texto blanco para los enlaces */
-    opacity: 0.9;
+    opacity: 0.8;
+    padding: 0.5rem 1.5rem; /* Aumenta el segundo valor (espaciado horizontal) */
+    /* Anteriormente era 0.5rem 1rem; ahora es 0.5rem 1.5rem; */
+    border-radius: 5px;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    font-size: 1.1rem; /* El tamaño de fuente que acabas de ajustar */
 }
 
 .navbar-nav .nav-link:hover {
@@ -267,22 +272,26 @@ header {
 }
 /* Mejoras para el carrusel - Texto legible */
 .carousel-caption {
-    background-color: rgba(83, 11, 19, 0.85); /* Fondo semitransparente */
-    padding: 25px 30px;
-    border-radius: 10px;
-    bottom: 20%;
+    /* Degradado de tu guinda primario a una versión un poco más oscura */
+    background: linear-gradient(to right, rgba(128, 5, 89, 0.9), rgba(60, 2, 42, 0.9)); /* Guinda a guinda más oscuro */
+    /* O de guinda a guinda más claro */
+    /* background: linear-gradient(to right, rgba(128, 5, 89, 0.9), rgba(160, 15, 115, 0.9)); */
+    
+    padding: 20px 30px;
+    border-radius: 8px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
     max-width: 800px;
-    text-align: center;
+    border: 2px solid white;
 }
 
 .carousel-caption h2 {
     font-size: 2.8rem;
     margin-bottom: 1.2rem;
     color: white;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 6px #800559(0, 0, 0, 0.6);
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -290,7 +299,7 @@ header {
 .carousel-caption p {
     font-size: 1.4rem;
     color: #f8f9fa;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 4px #800559(0, 0, 0, 0.5);
     margin-bottom: 0;
     line-height: 1.5;
 }
@@ -304,7 +313,7 @@ header {
 
 /* Mejoras para el texto SIN afectar tamaño de imagen */
 .carousel-caption {
-    background: linear-gradient(to right, rgba(83, 11, 19, 0.9), rgba(42, 39, 105, 0.9));
+    background: linear-gradient(to right, #800559(83, 11, 19, 0.9), rgba(42, 39, 105, 0.9));
     padding: 20px 30px;
     border-radius: 8px;
     bottom: 50px;
@@ -318,14 +327,14 @@ header {
 .carousel-caption h2 {
     font-size: 2.5rem;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px #800559(0, 0, 0, 0.5);
     margin-bottom: 10px;
 }
 
 .carousel-caption p {
     font-size: 1.2rem;
     color: #f8f9fa;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 3px #800559(0, 0, 0, 0.5);
 }
 
 /* Overlay sutil solo en la parte inferior */
@@ -336,7 +345,7 @@ header {
     left: 0;
     right: 0;
     height: 30%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 100%);
+    background: linear-gradient(to top, #800559(0,0,0,0.5) 0%, transparent 100%);
     z-index: 1;
 }
 
@@ -386,6 +395,29 @@ header {
     height: 4px;
     background-color: #2A2769;
 }
+
+/* Aseguramos que el título del blog use el estilo de sección */
+.blog-title { /* Si usas una clase específica para el título de tu blog, como 'blog-title' */
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 3rem; /* Más espacio debajo del título */
+    color: #530B13; /* Tu color guinda principal */
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+}
+
+.blog-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #2A2769; /* Tu color azul oscuro */
+    border-radius: 2px;
+}
 /* Sección de Bienvenida - Ajustes para imagen proporcional */
 .welcome-section {
     margin: 3rem 0;
@@ -399,7 +431,7 @@ header {
 }
 
 .welcome-card h1 {
-    color: #530B13;
+    color: #800559;
     font-size: 2.8rem; /* Tamaño base del título */
     margin-bottom: 1.5rem;
     text-align: center;
@@ -434,7 +466,7 @@ header {
     width: auto;
     max-width: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px #800559(0, 0, 0, 0.15);
     object-fit: contain;
 }
 
@@ -493,7 +525,7 @@ header {
 
 .destination-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px #800559(0, 0, 0, 0.1);
 }
 
 .destination-card img {
@@ -502,7 +534,7 @@ header {
 }
 
 .destination-body h3 {
-    color: #530B13;
+    color: #800559;
     margin-bottom: 1rem;
 }
 
@@ -516,13 +548,13 @@ header {
 }
 
 .btn-destination:hover {
-    background-color: #530B13;
+    background-color: #800559;
     color: white;
 }
 
 /* Por qué elegirnos */
 .why-us-content {
-    background-color: #530B13;
+    background-color: #800559;
     color: white;
 }
 
@@ -564,7 +596,7 @@ header {
 }
 
 .client-info h5 {
-    color: #530B13;
+    color: #800559;
     margin-bottom: 0.2rem;
 }
 
@@ -579,7 +611,7 @@ header {
 }
 
 .btn-cta {
-    background-color: #530B13;
+    background-color: #800559;
     color: white;
     padding: 10px 30px;
     border: none;
@@ -587,13 +619,13 @@ header {
 }
 
 .btn-cta:hover {
-    background-color: #3a0810;
+    background-color: #800559;
     color: white;
 }
 
 /* Footer */
 footer {
-    background-color: #530B13;
+    background-color: #800559;
     color: white;
     padding-top: 2rem;
 }
@@ -666,11 +698,11 @@ hr {
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px #800559(0, 0, 0, 0.1);
 }
 
 .destinos-table th {
-    background-color: #530B13;
+    background-color: #800559;
     color: white;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.2rem;
@@ -686,7 +718,7 @@ hr {
 
 .mes-cell {
     font-weight: bold;
-    color: #530B13;
+    color: #800559;
     background-color: rgba(83, 11, 19, 0.05);
     text-transform: capitalize;
 }
@@ -702,7 +734,7 @@ hr {
 }
 
 .btn-reservar:hover {
-    background-color: #530B13;
+    background-color: #800559;
     transform: translateY(-2px);
 }
 
@@ -722,7 +754,7 @@ hr {
         font-weight: bold;
         display: inline-block;
         width: 120px;
-        color: #530B13;
+        color: #800559;
     }
     
     .destinos-table tr {
@@ -734,7 +766,7 @@ hr {
     }
     
     .mes-cell {
-        background-color: #530B13;
+        background-color: #800559;
         color: white !important;
         display: block;
         margin: -0.5rem -0.5rem 0.5rem -0.5rem;
@@ -751,11 +783,11 @@ hr {
 .experience-card {
     background-color: white;
     border: 1px solid #eee;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 8px #800559(0,0,0,0.05);
 }
 
 .experience-card h5 {
-    color: #530B13;
+    color: #800559;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
@@ -838,3 +870,167 @@ hr {
   input, textarea, select {
     font-size: 16px; /* Evita zoom automático en iOS */
   }
+
+  /* Estilos para las tarjetas de artículos del blog */
+.card {
+    border: none; /* Quitamos el borde predeterminado de Bootstrap */
+    border-radius: 10px; /* Bordes redondeados suaves */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra sutil para profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave al pasar el mouse */
+    overflow: hidden; /* Asegura que la imagen no sobresalga del borde redondeado */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Pequeño levantamiento al pasar el mouse */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+.card-img-top {
+    height: 200px; /* Altura fija para las imágenes de las tarjetas */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Últimos Artículos (Featured Posts) */
+.featured-post {
+    display: flex; /* Esto hace que la imagen y el contenido se pongan uno al lado del otro */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #eee;
+}
+
+.featured-post:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.featured-post img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 0.8rem; /* Esto crea el espacio entre la imagen y el texto a su derecha */
+}
+
+.featured-post-content h6 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    line-height: 1.3;
+    color: #333;
+}
+
+.featured-post-content h6 a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.featured-post-content h6 a:hover {
+    color: #800559; /* Guinda al pasar el mouse */
+}
+
+.featured-post-content small {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.featured-post img {
+    width: 60px; /* Ancho fijo para miniaturas */
+    height: 60px; /* Altura fija para miniaturas */
+    object-fit: cover; /* Ajusta y recorta la imagen para que llene el espacio cuadrado */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    margin-right: 0.8rem;
+}
+
+.author-img {
+    width: 70px; /* Ancho fijo */
+    height: 70px; /* Altura fija para hacerla circular */
+    border-radius: 50%; /* La hace circular */
+    object-fit: cover; /* Ajusta y recorta para llenar el círculo */
+    margin-right: 1rem;
+    border: 2px solid #FCDC64; /* Borde amarillo de marca */
+}
+
+.card-body {
+    padding: 1.5rem; /* Espaciado interno generoso */
+}
+
+.card-title {
+    font-family: 'Bebas Neue', sans-serif; /* Usa la fuente de tus títulos */
+    color: #530B13; /* Tu color guinda primario */
+    font-size: 1.8rem; /* Tamaño de título de artículo */
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.btn-outline-secondary {
+    color: #2A2769; /* Color de tu azul oscuro */
+    border-color: #2A2769;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #2A2769;
+    color: white;
+}
+
+.text-muted {
+    font-size: 0.85rem;
+    color: #888 !important;
+}
+
+/* Estilos para las etiquetas de categoría (tags) */
+.blog-tag, .filter-tag {
+    display: inline-block;
+    padding: 0.3em 0.8em;
+    margin: 0.25rem 0.25rem 0.25rem 0;
+    border-radius: 20px; /* Bordes bien redondeados */
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: rgba(128, 5, 89, 0.1); /* Fondo sutil de tu color guinda */
+    color: #800559; /* Texto de tu color guinda */
+    border: 1px solid rgba(128, 5, 89, 0.3); /* Borde sutil */
+}
+
+.blog-tag:hover, .filter-tag:hover {
+    background-color: #800559; /* Fondo completo de tu color guinda al pasar el mouse */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el tag de filtro activo */
+.filter-tag.active-tag {
+    background-color: #800559; /* Fondo guinda */
+    color: white;
+    border-color: #800559;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Alineación de los botones de filtro */
+.filter-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar los filtros */
+    gap: 0.5rem; /* Espacio entre los filtros */
+    margin-bottom: 2rem;
+}
+
+/* Regla universal para hacer todas las imágenes responsivas */
+img {
+    max-width: 100%; /* Las imágenes no excederán el ancho de su contenedor */
+    height: auto;    /* La altura se ajustará automáticamente para mantener la proporción */
+    display: block;  /* Ayuda a eliminar espacios extra debajo de las imágenes */
+}
